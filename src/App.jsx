@@ -1,12 +1,13 @@
-import { Componente } from './Componente';
-
+import { BookList } from './Components/BookList';
+import logo from './img/openlibra-logo.png';
 
 export function App() {
-
+  
   return (
     <>
-      <h1>hola mundo</h1>
-      <Componente />
+      <img src={logo} alt="logo openlibrary" height='50px' />
+      <BookList />
+
     </>
   )
 }

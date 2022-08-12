@@ -1,12 +1,19 @@
 import { BookList } from './Components/BookList';
-import logo from './img/openlibra-logo.png';
+import { Header } from './Components/Header';
+import { BookDetail } from './Components/BookDetail';
+import { Routes, Route } from 'react-router-dom';
 
 export function App() {
   
   return (
     <>
-      <img src={logo} alt="logo openlibrary" height='50px' />
-      <BookList />
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<BookList />} />
+        <Route path='book/:bookId' element={<BookDetail />} />
+      </Routes>
+      {/* <BookList /> */}
 
     </>
   )
